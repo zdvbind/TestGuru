@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Category.create!(
   [
-    { name: 'Math' },
-    { name: 'Computer science' },
-    { name: 'Sport' }
+    { title: 'Math' },
+    { title: 'Computer science' },
+    { title: 'Sport' }
   ]
 )
 
@@ -96,8 +96,16 @@ User.create!(
   [
     { name: 'Dmitriy' },
     { name: 'John' },
-    { ame: 'Bob' },
-    { ame: 'Elizabeth' },
+    { name: 'Bob' },
+    { name: 'Elizabeth' },
     { name: 'Stacy' }
+  ]
+)
+TestResult.create!(
+  [
+    { test_id: 5, user_id: 1 },
+    { test_id: 7, user_id: 1 },
+    { test_id: 2, user_id: 2 },
+    { test_id: 1, user_id: 2 }
   ]
 )
