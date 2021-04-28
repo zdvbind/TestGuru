@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-categories = Category.create!(
+Category.create!(
   [
     { title: 'Math' },
     { title: 'Computer science' },
@@ -13,99 +13,101 @@ categories = Category.create!(
   ]
 )
 
-tests = Test.create!(
+User.create!(
   [
-    { title: 'Algebra', level: 3, category_id: categories.first.id },
-    { title: 'Geometry', level: 2, category_id: categories.first.id },
-    { title: 'Trigonometry', level: 2, category_id: categories.first.id },
-    { title: 'Trigonometry', level: 4, category_id: categories.first.id },
-    { title: 'Data Structures', level: 2, category_id: categories.second.id },
-    { title: 'Algorithms', level: 4, category_id: categories.second.id },
-    { title: 'Basketball', level: 1, category_id: categories.third.id },
-    { title: 'Hockey', level: 3, category_id: categories.third.id }
+    { name: 'Dmitriy', email: '1@gmail.com' },
+    { name: 'John', email: '2@gmail.com' },
+    { name: 'Bob', email: '3@gmail.com' },
+    { name: 'Elizabeth', email: '4@gmail.com' },
+    { name: 'Stacy', email: '5@gmail.com' }
   ]
 )
 
-questions = Question.create!(
+Test.create!(
   [
-    { body: 'Algebra question body 1', test_id: tests.first.id },
-    { body: 'Algebra question body 2', test_id: tests.first.id },
-    { body: 'Algebra question body 3', test_id: tests.first.id },
-    { body: 'Geometry question body 1', test_id: tests.second.id },
-    { body: 'Geometry question body 2', test_id: tests.second.id },
-    { body: 'Geometry question body 3', test_id: tests.second.id },
-    { body: 'Trigonometry question body 1 level 2', test_id: tests.third.id },
-    { body: 'Trigonometry question body 2 level 2', test_id: tests.third.id },
-    { body: 'Trigonometry question body 1 level 4', test_id: tests.third.id },
-    { body: 'Trigonometry question body 2 level 4', test_id: tests.third.id },
-    { body: 'Trigonometry question body 3 level 4', test_id: tests.third.id },
-    { body: 'Hockey question body 1', test_id: tests.last.id },
-    { body: 'Hockey question body 2', test_id: tests.last.id },
-    { body: 'Hockey question body 3', test_id: tests.last.id }
+    { title: 'Algebra', level: 3, category: Category.first, author: User.first },
+    { title: 'Geometry', level: 2, category: Category.first, author: User.first },
+    { title: 'Trigonometry', level: 2, category: Category.first, author: User.second },
+    { title: 'Trigonometry', level: 4, category: Category.first, author: User.second },
+    { title: 'Data Structures', level: 2, category: Category.second, author: User.third },
+    { title: 'Algorithms', level: 4, category: Category.second, author: User.third },
+    { title: 'Basketball', level: 1, category: Category.third, author: User.third },
+    { title: 'Hockey', level: 3, category: Category.third, author: User.third }
+  ]
+)
+
+question = Question.create!(
+  [
+    { body: 'Algebra question body 1', test: Test.first },
+    { body: 'Algebra question body 2', test: Test.first },
+    { body: 'Algebra question body 3', test: Test.first },
+    { body: 'Geometry question body 1', test: Test.second },
+    { body: 'Geometry question body 2', test: Test.second },
+    { body: 'Geometry question body 3', test: Test.second },
+    { body: 'Trigonometry question body 1 level 2', test: Test.third },
+    { body: 'Trigonometry question body 2 level 2', test: Test.third },
+    { body: 'Trigonometry question body 1 level 4', test: Test.third },
+    { body: 'Trigonometry question body 2 level 4', test: Test.third },
+    { body: 'Trigonometry question body 3 level 4', test: Test.third },
+    { body: 'Hockey question body 1', test: Test.last },
+    { body: 'Hockey question body 2', test: Test.last },
+    { body: 'Hockey question body 3', test: Test.last }
   ]
 )
 
 Answer.create!(
   [
-    { body: 'Answer 1', question_id: questions.first.id },
-    { body: 'Answer 2', question_id: questions.first.id },
-    { body: 'Answer 3', question_id: questions.first.id },
-    { body: 'Answer 1', question_id: questions.second.id },
-    { body: 'Answer 2', question_id: questions.second.id },
-    { body: 'Answer 3', question_id: questions.second.id },
-    { body: 'Answer 1', question_id: questions.third.id },
-    { body: 'Answer 2', question_id: questions.third.id },
-    { body: 'Answer 3', question_id: questions.third.id },
-    { body: 'Answer 1', question_id: questions.fourth.id },
-    { body: 'Answer 2', question_id: questions.fourth.id },
-    { body: 'Answer 3', question_id: questions.fourth.id },
-    { body: 'Answer 1', question_id: questions.fifth.id },
-    { body: 'Answer 2', question_id: questions.fifth.id },
-    { body: 'Answer 3', question_id: questions.fifth.id },
-    { body: 'Answer 1', question_id: questions[6].id },
-    { body: 'Answer 2', question_id: questions[6].id },
-    { body: 'Answer 3', question_id: questions[6].id },
-    { body: 'Answer 1', question_id: questions[7].id },
-    { body: 'Answer 2', question_id: questions[7].id },
-    { body: 'Answer 3', question_id: questions[7].id },
-    { body: 'Answer 1', question_id: questions[8].id },
-    { body: 'Answer 2', question_id: questions[8].id },
-    { body: 'Answer 3', question_id: questions[8].id },
-    { body: 'Answer 1', question_id: questions[9].id },
-    { body: 'Answer 2', question_id: questions[9].id },
-    { body: 'Answer 3', question_id: questions[9].id },
-    { body: 'Answer 1', question_id: questions[10].id },
-    { body: 'Answer 2', question_id: questions[10].id },
-    { body: 'Answer 3', question_id: questions[10].id },
-    { body: 'Answer 1', question_id: questions[11].id },
-    { body: 'Answer 2', question_id: questions[11].id },
-    { body: 'Answer 3', question_id: questions[11].id },
-    { body: 'Answer 1', question_id: questions[12].id },
-    { body: 'Answer 2', question_id: questions[12].id },
-    { body: 'Answer 3', question_id: questions[12].id },
-    { body: 'Answer 1', question_id: questions.second_to_last.id },
-    { body: 'Answer 2', question_id: questions.second_to_last.id },
-    { body: 'Answer 3', question_id: questions.second_to_last.id },
-    { body: 'Answer 1', question_id: questions.last.id },
-    { body: 'Answer 2', question_id: questions.last.id },
-    { body: 'Answer 3', question_id: questions.last.id }
+    { body: 'Answer 1', question: Question.first, correct: true },
+    { body: 'Answer 2', question: Question.first },
+    { body: 'Answer 3', question: Question.first },
+    { body: 'Answer 4', question: Question.first },
+    { body: 'Answer 1', question: Question.second, correct: true },
+    { body: 'Answer 2', question: Question.second },
+    { body: 'Answer 3', question: Question.second },
+    { body: 'Answer 1', question: Question.third, correct: true },
+    { body: 'Answer 2', question: Question.third },
+    { body: 'Answer 3', question: Question.third },
+    { body: 'Answer 1', question: Question.fourth, correct: true },
+    { body: 'Answer 2', question: Question.fourth },
+    { body: 'Answer 3', question: Question.fourth },
+    { body: 'Answer 1', question: Question.fifth, correct: true },
+    { body: 'Answer 2', question: Question.fifth },
+    { body: 'Answer 3', question: Question.fifth },
+    { body: 'Answer 1', question: Question.find(6), correct: true },
+    { body: 'Answer 2', question: Question.find(6) },
+    { body: 'Answer 3', question: Question.find(6) },
+    { body: 'Answer 1', question: Question.find(7), correct: true },
+    { body: 'Answer 2', question: Question.find(7) },
+    { body: 'Answer 3', question: Question.find(7) },
+    { body: 'Answer 1', question: Question.find(8), correct: true },
+    { body: 'Answer 2', question: Question.find(8) },
+    { body: 'Answer 3', question: Question.find(8) },
+    { body: 'Answer 1', question: Question.find(9), correct: true },
+    { body: 'Answer 2', question: Question.find(9) },
+    { body: 'Answer 3', question: Question.find(9) },
+    { body: 'Answer 1', question: Question.find(10), correct: true },
+    { body: 'Answer 2', question: Question.find(10) },
+    { body: 'Answer 3', question: Question.find(10) },
+    { body: 'Answer 1', question: Question.find(11), correct: true },
+    { body: 'Answer 2', question: Question.find(11) },
+    { body: 'Answer 3', question: Question.find(11) },
+    { body: 'Answer 1', question: Question.third_to_last, correct: true },
+    { body: 'Answer 2', question: Question.third_to_last },
+    { body: 'Answer 3', question: Question.third_to_last },
+    { body: 'Answer 1', question: Question.second_to_last, correct: true },
+    { body: 'Answer 2', question: Question.second_to_last },
+    { body: 'Answer 3', question: Question.second_to_last },
+    { body: 'Answer 1', question: Question.last, correct: true },
+    { body: 'Answer 2', question: Question.last },
+    { body: 'Answer 3', question: Question.last }
   ]
 )
 
-users = User.create!(
-  [
-    { name: 'Dmitriy' },
-    { name: 'John' },
-    { name: 'Bob' },
-    { name: 'Elizabeth' },
-    { name: 'Stacy' }
-  ]
-)
 TestResult.create!(
   [
-    { test_id: 5, user_id: users.first.id },
-    { test_id: 7, user_id: users.first.id },
-    { test_id: 2, user_id: users.second.id },
-    { test_id: 1, user_id: users.second.id }
+    { test: Test.fifth, user: User.first },
+    { test: Test.find(6), user: User.first },
+    { test: Test.second, user: User.second },
+    { test: Test.first, user: User.second }
   ]
 )
