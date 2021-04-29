@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Category.create!(
+category = Category.create!(
   [
     { title: 'Math' },
     { title: 'Computer science' },
@@ -13,7 +13,7 @@ Category.create!(
   ]
 )
 
-User.create!(
+user = User.create!(
   [
     { name: 'Dmitriy', email: '1@gmail.com' },
     { name: 'John', email: '2@gmail.com' },
@@ -23,91 +23,91 @@ User.create!(
   ]
 )
 
-Test.create!(
+test = Test.create!(
   [
-    { title: 'Algebra', level: 3, category: Category.first, author: User.first },
-    { title: 'Geometry', level: 2, category: Category.first, author: User.first },
-    { title: 'Trigonometry', level: 2, category: Category.first, author: User.second },
-    { title: 'Trigonometry', level: 4, category: Category.first, author: User.second },
-    { title: 'Data Structures', level: 2, category: Category.second, author: User.third },
-    { title: 'Algorithms', level: 4, category: Category.second, author: User.third },
-    { title: 'Basketball', level: 1, category: Category.third, author: User.third },
-    { title: 'Hockey', level: 3, category: Category.third, author: User.third }
+    { title: 'Algebra', level: 3, category: category.first, author: user.first },
+    { title: 'Geometry', level: 2, category: category.first, author: user.first },
+    { title: 'Trigonometry', level: 2, category: category.first, author: user.second },
+    { title: 'Trigonometry', level: 4, category: category.first, author: user.second },
+    { title: 'Data Structures', level: 2, category: category.second, author: user.third },
+    { title: 'Algorithms', level: 4, category: category.second, author: user.third },
+    { title: 'Basketball', level: 1, category: category.third, author: user.third },
+    { title: 'Hockey', level: 3, category: category.third, author: user.third }
   ]
 )
 
 question = Question.create!(
   [
-    { body: 'Algebra question body 1', test: Test.first },
-    { body: 'Algebra question body 2', test: Test.first },
-    { body: 'Algebra question body 3', test: Test.first },
-    { body: 'Geometry question body 1', test: Test.second },
-    { body: 'Geometry question body 2', test: Test.second },
-    { body: 'Geometry question body 3', test: Test.second },
-    { body: 'Trigonometry question body 1 level 2', test: Test.third },
-    { body: 'Trigonometry question body 2 level 2', test: Test.third },
-    { body: 'Trigonometry question body 1 level 4', test: Test.third },
-    { body: 'Trigonometry question body 2 level 4', test: Test.third },
-    { body: 'Trigonometry question body 3 level 4', test: Test.third },
-    { body: 'Hockey question body 1', test: Test.last },
-    { body: 'Hockey question body 2', test: Test.last },
-    { body: 'Hockey question body 3', test: Test.last }
+    { body: 'Algebra question body 1', test: test.first },
+    { body: 'Algebra question body 2', test: test.first },
+    { body: 'Algebra question body 3', test: test.first },
+    { body: 'Geometry question body 1', test: test.second },
+    { body: 'Geometry question body 2', test: test.second },
+    { body: 'Geometry question body 3', test: test.second },
+    { body: 'Trigonometry question body 1 level 2', test: test.third },
+    { body: 'Trigonometry question body 2 level 2', test: test.third },
+    { body: 'Trigonometry question body 1 level 4', test: test.third },
+    { body: 'Trigonometry question body 2 level 4', test: test.third },
+    { body: 'Trigonometry question body 3 level 4', test: test.third },
+    { body: 'Hockey question body 1', test: test.last },
+    { body: 'Hockey question body 2', test: test.last },
+    { body: 'Hockey question body 3', test: test.last }
   ]
 )
 
 Answer.create!(
   [
-    { body: 'Answer 1', question: Question.first, correct: true },
-    { body: 'Answer 2', question: Question.first },
-    { body: 'Answer 3', question: Question.first },
-    { body: 'Answer 4', question: Question.first },
-    { body: 'Answer 1', question: Question.second, correct: true },
-    { body: 'Answer 2', question: Question.second },
-    { body: 'Answer 3', question: Question.second },
-    { body: 'Answer 1', question: Question.third, correct: true },
-    { body: 'Answer 2', question: Question.third },
-    { body: 'Answer 3', question: Question.third },
-    { body: 'Answer 1', question: Question.fourth, correct: true },
-    { body: 'Answer 2', question: Question.fourth },
-    { body: 'Answer 3', question: Question.fourth },
-    { body: 'Answer 1', question: Question.fifth, correct: true },
-    { body: 'Answer 2', question: Question.fifth },
-    { body: 'Answer 3', question: Question.fifth },
-    { body: 'Answer 1', question: Question.find(6), correct: true },
-    { body: 'Answer 2', question: Question.find(6) },
-    { body: 'Answer 3', question: Question.find(6) },
-    { body: 'Answer 1', question: Question.find(7), correct: true },
-    { body: 'Answer 2', question: Question.find(7) },
-    { body: 'Answer 3', question: Question.find(7) },
-    { body: 'Answer 1', question: Question.find(8), correct: true },
-    { body: 'Answer 2', question: Question.find(8) },
-    { body: 'Answer 3', question: Question.find(8) },
-    { body: 'Answer 1', question: Question.find(9), correct: true },
-    { body: 'Answer 2', question: Question.find(9) },
-    { body: 'Answer 3', question: Question.find(9) },
-    { body: 'Answer 1', question: Question.find(10), correct: true },
-    { body: 'Answer 2', question: Question.find(10) },
-    { body: 'Answer 3', question: Question.find(10) },
-    { body: 'Answer 1', question: Question.find(11), correct: true },
-    { body: 'Answer 2', question: Question.find(11) },
-    { body: 'Answer 3', question: Question.find(11) },
-    { body: 'Answer 1', question: Question.third_to_last, correct: true },
-    { body: 'Answer 2', question: Question.third_to_last },
-    { body: 'Answer 3', question: Question.third_to_last },
-    { body: 'Answer 1', question: Question.second_to_last, correct: true },
-    { body: 'Answer 2', question: Question.second_to_last },
-    { body: 'Answer 3', question: Question.second_to_last },
-    { body: 'Answer 1', question: Question.last, correct: true },
-    { body: 'Answer 2', question: Question.last },
-    { body: 'Answer 3', question: Question.last }
+    { body: 'Answer 1', question: question.first, correct: true },
+    { body: 'Answer 2', question: question.first },
+    { body: 'Answer 3', question: question.first },
+    { body: 'Answer 4', question: question.first },
+    { body: 'Answer 1', question: question.second, correct: true },
+    { body: 'Answer 2', question: question.second },
+    { body: 'Answer 3', question: question.second },
+    { body: 'Answer 1', question: question.third, correct: true },
+    { body: 'Answer 2', question: question.third },
+    { body: 'Answer 3', question: question.third },
+    { body: 'Answer 1', question: question.fourth, correct: true },
+    { body: 'Answer 2', question: question.fourth },
+    { body: 'Answer 3', question: question.fourth },
+    { body: 'Answer 1', question: question.fifth, correct: true },
+    { body: 'Answer 2', question: question.fifth },
+    { body: 'Answer 3', question: question.fifth },
+    { body: 'Answer 1', question: question[5], correct: true },
+    { body: 'Answer 2', question: question[5] },
+    { body: 'Answer 3', question: question[5] },
+    { body: 'Answer 1', question: question[6], correct: true },
+    { body: 'Answer 2', question: question[6] },
+    { body: 'Answer 3', question: question[6] },
+    { body: 'Answer 1', question: question[7], correct: true },
+    { body: 'Answer 2', question: question[7] },
+    { body: 'Answer 3', question: question[7] },
+    { body: 'Answer 1', question: question[8], correct: true },
+    { body: 'Answer 2', question: question[8] },
+    { body: 'Answer 3', question: question[8] },
+    { body: 'Answer 1', question: question[9], correct: true },
+    { body: 'Answer 2', question: question[9] },
+    { body: 'Answer 3', question: question[9] },
+    { body: 'Answer 1', question: question[10], correct: true },
+    { body: 'Answer 2', question: question[10] },
+    { body: 'Answer 3', question: question[10] },
+    { body: 'Answer 1', question: question.third_to_last, correct: true },
+    { body: 'Answer 2', question: question.third_to_last },
+    { body: 'Answer 3', question: question.third_to_last },
+    { body: 'Answer 1', question: question.second_to_last, correct: true },
+    { body: 'Answer 2', question: question.second_to_last },
+    { body: 'Answer 3', question: question.second_to_last },
+    { body: 'Answer 1', question: question.last, correct: true },
+    { body: 'Answer 2', question: question.last },
+    { body: 'Answer 3', question: question.last }
   ]
 )
 
 TestResult.create!(
   [
-    { test: Test.fifth, user: User.first },
-    { test: Test.find(6), user: User.first },
-    { test: Test.second, user: User.second },
-    { test: Test.first, user: User.second }
+    { test: test.fifth, user: user.first },
+    { test: test[5], user: user.first },
+    { test: test.second, user: user.second },
+    { test: test.first, user: user.second }
   ]
 )
