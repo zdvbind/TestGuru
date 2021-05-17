@@ -1,21 +1,21 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[create]
+  before_action :find_test, only: %i[create new]
   before_action :find_question, only: %i[show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-
   def show
     @test = @question.test
-    render inline: '<h2> Test: <%= @test.title %></h2> <h4>Question: <%= @question.body %></h4>'
   end
 
-  def new; end
+  def new
+    @question = @test.questions.new
+  end
 
   def create
     @question = @test.questions.build(question_params)
     if @question.save
-      redirect_to test_questions_path(@test)
+      redirect_to test_path(@test)
     else
       render plain: "An error occurred while saving question"
     end
