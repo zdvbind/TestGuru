@@ -17,7 +17,6 @@
   <strong>Category:</strong>
   <%= @test.category.title %>
 </p>
-
 <h3>Test's questions</h3>
 <table>
   <thead>
@@ -26,11 +25,7 @@
   </tr>
   </thead>
   <tbody>
-    <% @test.questions.each do |question| %>
-    <tr>
-      <td><%= question.body %></td>
-    </tr>
-    <% end %>
+    <%= render @test.questions %>
   </tbody>
 </table>
 <%= link_to 'Edit', edit_test_path(@test) %> |
