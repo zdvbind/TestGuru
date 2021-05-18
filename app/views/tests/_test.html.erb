@@ -3,6 +3,7 @@
   <td><%= test_level(test) %></td>
   <td><%= test.category.title %></td>
   <td><%= test.author.name %></td>
+  <td><%= count_of_questions(test) %></td>
   <td><%= link_to 'Show', test_path(test) %></td>
   <td><%= link_to 'Edit', edit_test_path(test) %></td>
   <td>
