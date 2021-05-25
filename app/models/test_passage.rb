@@ -25,6 +25,14 @@ class TestPassage < ApplicationRecord
     rating >= PASSING_SCORE
   end
 
+  def count_of_questions
+    test.questions.count
+  end
+
+  def current_question_number
+    test.questions.index(current_question)+1
+  end
+
   private
 
   def b_valid_set_current_question
