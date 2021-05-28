@@ -1,13 +1,12 @@
 class ApplicationController < ActionController::Base
-
   helper_method :current_user, :logged_in?
 
   private
 
   def authenticate_user!
-    unless current_user
-      redirect_to login_path, alert: 'Are you a Guru? Verify your email and password please'
-    end
+    return if current_user
+
+    redirect_to login_path, alert: 'Are you a Guru? Verify your email and password please'
   end
 
   def current_user
