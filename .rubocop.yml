@@ -21,3 +21,6 @@ Metrics/LineLength:
 
 Style/StringLiterals:
   Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
