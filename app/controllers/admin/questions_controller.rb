@@ -1,4 +1,4 @@
-class QuestionsController < ApplicationController
+class Admin::QuestionsController < Admin::BaseController
   before_action :find_test, only: %i[create new]
   before_action :find_question, only: %i[show edit update destroy]
 
@@ -15,7 +15,8 @@ class QuestionsController < ApplicationController
   def create
     @question = @test.questions.build(question_params)
     if @question.save
-      redirect_to test_path(@test)
+      redirect_to admin_question_path(@question)
+      # redirect_to test_path(@test)
     else
       render plain: "An error occurred while saving question"
     end
@@ -23,7 +24,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to @question
+      redirect_to admin_question_path(@question)
     else
       render :edit
     end
