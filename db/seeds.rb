@@ -13,15 +13,15 @@ category = Category.create!(
   ]
 )
 
-user = User.create!(
-  [
-    { name: 'Dmitriy', email: '1@gmail.com' },
-    { name: 'John', email: '2@gmail.com' },
-    { name: 'Bob', email: '3@gmail.com' },
-    { name: 'Elizabeth', email: '4@gmail.com' },
-    { name: 'Stacy', email: '5@gmail.com' }
-  ]
-)
+user = User.all
+#   [
+#     { email: '1@gmail.com' },
+#     { email: '2@gmail.com' },
+#     { email: '3@gmail.com' },
+#     { email: '4@gmail.com' },
+#     { email: '5@gmail.com' }
+#   ]
+# )
 
 test = Test.create!(
   [
@@ -112,11 +112,11 @@ Answer.create!(
   ]
 )
 
-TestResult.create!(
-  [
-    { test: test.fifth, user: user.first },
-    { test: test[5], user: user.first },
-    { test: test.second, user: user.second },
-    { test: test.first, user: user.second }
-  ]
-)
+# TestPassage.create!(
+#   [
+#     { test: test.fifth, user: user.first },
+#     { test: test[5], user: user.first },
+#     { test: test.second, user: user.second },
+#     { test: test.first, user: user.second }
+#   ]
+# )

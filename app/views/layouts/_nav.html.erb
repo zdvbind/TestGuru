@@ -1,18 +1,18 @@
 <div class="nav user">
   <%= link_to "Test Guru", root_path %>
 </div>
-  <% if logged_in? %>
+  <% if user_signed_in? %>
     <div class="nav user">
       Welcome, <b><%= current_user.email %></b> Guru
     </div>
     <div class="nav user">
-      <%= link_to "LogOut", logout_path, method: :delete %>
+      <%= link_to "LogOut", destroy_user_session_path, method: :delete %>
     </div>
   <% else %>
     <div class="nav user">
-      <%= link_to "SignUp", signup_path %>
+      <%= link_to "SignUp", new_user_registration_path %>
     </div>
     <div class="nav user">
-      <%= link_to "LogIn", login_path %>
+      <%= link_to "LogIn", new_user_session_path %>
     </div>
 <% end %>
