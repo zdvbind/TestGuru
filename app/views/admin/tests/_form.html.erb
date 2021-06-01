@@ -17,12 +17,6 @@
   </p>
 
   <p>
-    <%= form.label :author %><br>
-    <%= form.collection_select :author_id, User.all,
-                               :id, :email, prompt: true %>
-  </p>
-
-  <p>
     <%= form.submit %>
   </p>
 <% end %>
