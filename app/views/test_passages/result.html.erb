@@ -1,4 +1,5 @@
-<h1><%= @test_passage.test.title %>Test was completed! </h1>
+<!--<h1><%#= @test_passage.test.title %>Test was completed! </h1>-->
+<h1><%= t('.header', title: @test_passage.test.title )%></h1>
 <p>
   You answered <%= @test_passage.correct_questions %> of <%= @test_passage.test.questions.count %> questions correctly
   (<b class="<%= message_of_result(@test_passage)%>"> <%= @test_passage.rating %>%</b>)
