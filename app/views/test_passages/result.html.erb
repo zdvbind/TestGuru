@@ -1,11 +1,14 @@
 <!--<h1><%#= @test_passage.test.title %>Test was completed! </h1>-->
 <h1><%= t('.header', title: @test_passage.test.title )%></h1>
 <p>
-  You answered <%= @test_passage.correct_questions %> of <%= @test_passage.test.questions.count %> questions correctly
+  <%= t('.answer_pattern', correct_answer: @test_passage.correct_questions) %>
+  <%= @test_passage.test.questions.count %>
   (<b class="<%= message_of_result(@test_passage)%>"> <%= @test_passage.rating %>%</b>)
 </p>
 
 <h3>
-  Test <%= message_of_result(@test_passage)%>
+  <%= t('.test')%>
+  <%= t(".#{message_of_result(@test_passage)}") %>
+<!--  Test <%#= message_of_result(@test_passage)%>-->
 </h3>
-<%= link_to 'Back to list of tests', tests_path %>
+<%= link_to t('item.link.back'), tests_path %>

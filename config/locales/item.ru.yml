@@ -1,0 +1,23 @@
+ru:
+  item:
+    button:
+      start: "Старт"
+    link:
+      new_test: "Новый тест"
+      new_answer: "Новый ответ"
+      back: "Назад"
+      show: "Показать"
+      edit: "Редактировать"
+      delete: "Удалить"
+      new_question: "Новый вопрос"
+      login: "Войти"
+      logout: "Выйти"
+      signup: "Зарегистрироваться"
+      forgot_password: "Забыли ваш пароль?"
+      lost_confirm: "Не получили инструкции по потдверждению?"
+      lost_unlock: "Не получили инструкции по разблокировке?"
+      signin_with: "Войти с помощью"
+      footer_school: "Учебный проект в онлайн школе Thinknetika"
+
+    popup:
+      confirm: 'Вы уверены?'

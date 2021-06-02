@@ -3,16 +3,17 @@
 </div>
   <% if user_signed_in? %>
     <div class="nav user">
-      Welcome, <b><%= current_user.email %></b> Guru
+
+      <%= t('nav.welcome') %><b><%= current_user.email %></b> <%= t('nav.guru') %>
     </div>
     <div class="nav user">
-      <%= link_to "LogOut", destroy_user_session_path, method: :delete %>
+      <%= link_to t('item.link.logout'), destroy_user_session_path, method: :delete %>
     </div>
   <% else %>
     <div class="nav user">
-      <%= link_to "SignUp", new_user_registration_path %>
+      <%= link_to t('item.link.signup'), new_user_registration_path %>
     </div>
     <div class="nav user">
-      <%= link_to "LogIn", new_user_session_path %>
+      <%= link_to t('item.link.login'), new_user_session_path %>
     </div>
 <% end %>

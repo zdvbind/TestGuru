@@ -1,16 +1,36 @@
 ru:
   hello: "Привет мир"
+  creator: "Загута Дмитрий"
+
+  nav:
+    welcome: "Добро пожаловать, "
+    guru: "Гуру"
+    panel: "Панель администратора Тест Гуру"
+
 
   helpers:
     submit:
       test:
         create: "Создать тест"
         update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
     label:
       test:
         title: "Название"
         level: "Уровень"
         category: "Категория"
+      question:
+        body: "Вопрос"
+      answer:
+        body: "Ответ"
+        correct: "Верный"
+    select:
+      prompt: "Пожалуйста выберите"
 
   shared:
     errors:
@@ -23,17 +43,80 @@ ru:
   tests:
     index:
       header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      category: "Категория"
+      author: "Автор"
+      q_count: "Количество вопросов"
+
   test_passages:
+    show:
+      passing: "Прохождение %{title} теста"
+      question_number: "Вопрос № %{number} из "
     result:
       header: "Тест %{title} успешно завершён"
+      answer_pattern: "Количество правильных ответов: %{correct_answer} из "
+      test: "Тест "
+      passed: "пройден"
+      failed: "не пройден"
+
 
   admin:
     tests:
-      create:
-        success: "Тест успешно создан"
       index:
         header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        author: "Автор"
+        q_count: "Количество вопросов"
+        actions: "Доступные действия"
+      create:
+        success: "Тест успешно создан"
+      new:
+        new_test: "Создать новый тест"
+      show:
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        author: "Автор"
+        t_questions: "Вопросы теста"
+        body: "Вопрос"
+        actions: "Доступные действия"
+      edit:
+        edit: "Редактирование теста"
+    questions:
+      show:
+        header: "Тест"
+        header1: "Ответы"
+      form:
+        create: "Создание нового вопроса для теста"
+        edit: "Редактирование вопроса для теста"
+    answers:
+      show:
+        header: "Вопрос"
+        header1: "Ответ"
+        correct: "Верный"
+      new:
+        header: "Новый ответ"
+      edit:
+        header: "Редактирование ответа"
 
   test_mailer:
     completed_test:
       subject: "Вы только что успешно завершили тест на TestGuru!"
+
+  devise:
+    sessions:
+      new:
+        header: "Вход в Гуру ворота"
+        email: "Адрес электронной почты"
+        password: "Пароль"
+        remember: "Запомнить меня"
+    registrations:
+      new:
+        email: "Адрес электронной почты"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        first_name: "Имя"
+        last_name: "Фамилия"

@@ -1,0 +1,22 @@
+en:
+  item:
+    button:
+      start: "Start"
+    link:
+      new_test: "New test"
+      new_answer: "New answer"
+      back: "Back"
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+      new_question: "New_question"
+      login: "LogIn"
+      logout: "LogOut"
+      signup: "SignUp"
+      forgot_password: "Forgot your password?"
+      lost_confirm: "Didn't receive confirmation instructions?"
+      lost_unlock: "Didn't receive unlock instructions?"
+      signin_with: "Sign in with"
+      footer_school: "Training project in online-school Thinknetika"
+    popup:
+      confirm: 'Are you sure?'
