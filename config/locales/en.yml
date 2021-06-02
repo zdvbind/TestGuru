@@ -38,6 +38,9 @@ en:
     guru: "Guru"
     panel: "Test Guru Admin Panel"
 
+  flash:
+    hello: "Hello"
+
   helpers:
     submit:
       test:

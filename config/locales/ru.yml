@@ -7,6 +7,9 @@ ru:
     guru: "Гуру"
     panel: "Панель администратора Тест Гуру"
 
+  flash:
+    hello: "Привет"
+
 
   helpers:
     submit:
