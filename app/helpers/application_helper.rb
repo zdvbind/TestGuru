@@ -1,4 +1,9 @@
 module ApplicationHelper
+  FLASH_CLASS = {
+    alert: 'danger',
+    notice: 'success'
+  }.freeze
+
   def current_year
     Date.current.year
   end
@@ -8,6 +13,6 @@ module ApplicationHelper
   end
 
   def flash_message(message, type)
-    content_tag :p, message, class: "flash #{type}"
+    content_tag :p, message, class: ["alert alert-#{FLASH_CLASS[type.to_sym]}", "m-3"], role: "alert"
   end
 end

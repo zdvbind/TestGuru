@@ -1,6 +1,9 @@
 <nav class="navbar navbar-light bg-light">
   <%= link_to "Test Guru", root_path, class: 'navbar-brand' %>
   <span class="navbar-text">
+    <% if current_user.is_a?(Admin) %>
+      <%= link_to t('nav.panel'), admin_tests_path, :class => 'btn btn-outline-secondary btn-sm' %>
+    <% end %>
     <% if user_signed_in? %>
       <%= t('nav.welcome') %><b><%= current_user.email %></b> <%= t('nav.guru') %> |
       <%= link_to t('item.link.logout'), destroy_user_session_path, method: :delete %>
@@ -10,23 +13,3 @@
     <% end %>
   </span>
 </nav>
-
-<!--<div class="nav user">-->
-
-<!--</div>-->
-  <%# if user_signed_in? %>
-<!--    <div class="nav user">-->
-
-<!--      <%#= t('nav.welcome') %><b><%#= current_user.email %></b> <%#= t('nav.guru') %>-->
-<!--    </div>-->
-<!--    <div class="nav user">-->
-      <%#= link_to t('item.link.logout'), destroy_user_session_path, method: :delete %>
-<!--    </div>-->
-  <%# else %>
-<!--    <div class="nav user">-->
-      <%#= link_to t('item.link.signup'), new_user_registration_path %>
-<!--    </div>-->
-<!--    <div class="nav user">-->
-      <%#= link_to t('item.link.login'), new_user_session_path %>
-<!--    </div>-->
-<%# end %>

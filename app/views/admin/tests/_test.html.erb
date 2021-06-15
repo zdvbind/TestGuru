@@ -4,12 +4,13 @@
   <td><%= test.category.title %></td>
   <td><%= test.author.email %></td>
   <td><%= count_of_questions(test) %></td>
-  <td><%= link_to t('item.link.show'), admin_test_path(test) %></td>
-  <td><%= link_to t('item.link.edit'), edit_admin_test_path(test) %></td>
+  <td><%= link_to t('item.link.show'), admin_test_path(test), class: "btn btn-outline-info btn-sm" %></td>
+  <td><%= link_to t('item.link.edit'), edit_admin_test_path(test), class: "btn btn-outline-warning btn-sm" %></td>
   <td>
     <%= link_to t('item.link.delete'),
                 admin_test_path(test),
                 method: :delete,
-                data: { confirm: t('item.popup.confirm') }%>
+                data: { confirm: t('item.popup.confirm') },
+                class: "btn btn-outline-danger btn-sm" %>
   </td>
 </tr>
