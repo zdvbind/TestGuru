@@ -143,6 +143,7 @@ en:
         email: "Email"
         pasword: "Password"
         remember: "Remember me"
+        enter_email: "Enter email"
     registration:
       new:
         email: "Email"

@@ -116,6 +116,7 @@ ru:
         email: "Адрес электронной почты"
         password: "Пароль"
         remember: "Запомнить меня"
+        enter_email: "Введите имэйл"
     registrations:
       new:
         email: "Адрес электронной почты"
