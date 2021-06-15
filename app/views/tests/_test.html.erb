@@ -4,5 +4,6 @@
   <td><%= test.category.title %></td>
   <td><%= test.author.email %></td>
   <td><%= count_of_questions(test) %></td>
-  <td><%= button_to t('item.button.start'), start_test_path(test) %></td>
+<!--  <td><%#= count_of_questions(test) %></td>-->
+  <td><%= button_to t('item.button.start'), start_test_path(test), :class => 'btn btn-primary btn-sm' %></td>
 </tr>

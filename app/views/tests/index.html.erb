@@ -1,13 +1,30 @@
-<h1><%= t('tests.index.header') %></h1>
+<!--<h1><%#= t('tests.index.header') %></h1>-->
+<!--<table>-->
+<!--  <tr>-->
+<!--    <th><%#= t('.title')%></th>-->
+<!--    <th><%#= t('.level')%></th>-->
+<!--    <th><%#= t('.category')%></th>-->
+<!--    <th><%#= t('.author')%></th>-->
+<!--    <th><%#= t('.q_count')%></th>-->
+<!--  </tr>-->
 
-<table>
-  <tr>
-    <th><%= t('.title')%></th>
-    <th><%= t('.level')%></th>
-    <th><%= t('.category')%></th>
-    <th><%= t('.author')%></th>
-    <th><%= t('.q_count')%></th>
-  </tr>
 
-  <%= render @tests %>
-</table>
+<%#= render @tests %>
+<!--</table>-->
+
+<div class="row justify-content-center mt-4">
+  <div class="col-12 col-md-8">
+    <table class="table caption-top table-hover align-middle mt-3">
+      <caption><%= t('.header') %> </caption>
+      <thead class="table-dark">
+        <th scope="col"><%= t('.title') %></th>
+        <th scope="col" class="text-center"><%= t('.level') %></th>
+        <th scope="col" class="text-center"><%= t('.category') %></th>
+        <th scope="col" class="text-center"><%= t('.author') %></th>
+        <th scope="col"><%= t('.q_count') %></th>
+        <th scope="col">#</th>
+      </thead>
+      <%= render @tests %>
+    </table>
+  </div>
+</div>
