@@ -29,7 +29,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 # AUTH
 gem 'devise', '~> 4.0'
-
+# NETWORKING
+gem 'faraday'
 # LOCALIZATION
 gem 'rails-i18n', '~> 6.0.0'
 
