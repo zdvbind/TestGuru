@@ -1,5 +1,4 @@
 class GitHubClient
-  ACCESS_TOKEN = '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'.freeze
   attr_reader :http_client
 
   def initialize
@@ -13,6 +12,6 @@ class GitHubClient
   private
 
   def setup_http_client
-    Octokit::Client.new(access_token: ACCESS_TOKEN)
+    Octokit::Client.new(access_token: ENV['GIT_HUB_ACCESS_TOKEN'])
   end
 end
