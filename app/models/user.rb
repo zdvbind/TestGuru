@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :author_tests, class_name: 'Test', foreign_key: 'author_id', dependent: :nullify
+  has_many :gists
 
   validates :email, presence: true,
                     uniqueness: { case_sensitive: false },
