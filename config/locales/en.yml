@@ -34,6 +34,7 @@ en:
   creator: "Dmitry Zaguta"
 
   nav:
+    gists: "List of questions, saved in Gist"
     welcome: "Welcome,  "
     guru: "Guru"
     panel: "Test Guru Admin Panel"
@@ -96,6 +97,12 @@ en:
       failure: "An error occurred while saving gist"
 
   admin:
+    gists:
+      index:
+        header: "List of questions, saved in Gist"
+        link: "Link to Gist"
+        user: "User email"
+        question: "Question"
     tests:
       index:
         header: "Tricky Tests"

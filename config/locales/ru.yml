@@ -6,6 +6,7 @@ ru:
     welcome: "Добро пожаловать, "
     guru: "Гуру"
     panel: "Панель администратора Тест Гуру"
+    gists: "Список сохраненных в Gist вопросов"
 
   flash:
     hello: "Привет"
@@ -68,6 +69,12 @@ ru:
       failure: "Во время сохранения gist произошла ошибка"
 
   admin:
+    gists:
+      index:
+        header: "Список сохраненных в Gist вопросов"
+        link: "Ссылка на Gist"
+        user: "Email пользователя"
+        question: "Вопрос"
     tests:
       index:
         header: "Доступные тесты"
