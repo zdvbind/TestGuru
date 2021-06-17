@@ -13,6 +13,6 @@ module ApplicationHelper
   end
 
   def flash_message(message, type)
-    content_tag :p, message, class: ["alert alert-#{FLASH_CLASS[type.to_sym]}", "m-3"], role: "alert"
+    content_tag :p, message.html_safe, class: ["alert alert-#{FLASH_CLASS[type.to_sym]}", "m-3"], role: "alert"
   end
 end

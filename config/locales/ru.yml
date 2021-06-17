@@ -63,7 +63,7 @@ ru:
       passed: "пройден"
       failed: "не пройден"
     gist:
-      success: "Gist успешно сохранен!"
+      success: "успешно сохранен!"
       failure: "Во время сохранения gist произошла ошибка"
 
   admin:

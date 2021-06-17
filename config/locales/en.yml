@@ -91,7 +91,7 @@ en:
       passed: "was passed"
       failed: "wasn't passed"
     gist:
-      success: "Gist was successfully created!"
+      success: "was successfully created!"
       failure: "An error occurred while saving gist"
 
   admin:
