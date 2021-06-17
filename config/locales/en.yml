@@ -84,6 +84,7 @@ en:
     show:
       passing: "Passing the %{title} test"
       question_number: "Question № %{number} of "
+      gist: "Save question with Gist"
     result:
       header: "The %{title} Test was Completed!"
       answer_pattern: "Correct answers: %{correct_answer} of "
