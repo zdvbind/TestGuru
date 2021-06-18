@@ -20,12 +20,11 @@ class TestPassagesController < ApplicationController
     gist = result.call
 
     if result.success?
-      @test_passage.user.gists.create(gist_url: gist[:html_url], question: @test_passage.current_question)
+      current_user.gists.create(gist_url: gist[:html_url], question: @test_passage.current_question)
       flash[:notice] = "#{view_context.link_to('Gist', gist[:html_url], target: '_blank')} #{t('.success')}"
     else
       flash[:alert] = t('.failure')
     end
-    # redirect_to @test_passage, flash_options
     redirect_to @test_passage
   end
 
