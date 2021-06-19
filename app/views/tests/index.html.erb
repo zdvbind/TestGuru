@@ -1,16 +1,22 @@
 <div class="row justify-content-center mt-4">
   <div class="col-12 col-md-8">
+    <h3><%= t('.header') %> </h3>
     <table class="table caption-top table-hover align-middle mt-3">
-      <caption><%= t('.header') %> </caption>
-      <thead class="table-dark">
-        <th scope="col"><%= t('.title') %></th>
-        <th scope="col" class="text-center"><%= t('.level') %></th>
-        <th scope="col" class="text-center"><%= t('.category') %></th>
-        <th scope="col" class="text-center"><%= t('.author') %></th>
-        <th scope="col"><%= t('.q_count') %></th>
-        <th scope="col">#</th>
-      </thead>
+      <tbody>
+        <tr>
+          <th scope="col" class="sort-by-title pointer">
+            <%= t('.title') %>
+            <%= octicon 'arrow-up', class: 'text-success hide' %>
+            <%= octicon 'arrow-down', class: 'text-success hide' %>
+          </th>
+          <th scope="col" class="text-center"><%= t('.level') %></th>
+          <th scope="col" class="text-center"><%= t('.category') %></th>
+          <th scope="col" class="text-center"><%= t('.author') %></th>
+          <th scope="col"><%= t('.q_count') %></th>
+          <th scope="col">#</th>
+        </tr>
       <%= render @tests %>
+      </tbody>
     </table>
   </div>
 </div>
