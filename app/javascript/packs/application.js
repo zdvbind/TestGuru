@@ -15,6 +15,7 @@ ActiveStorage.start()
 import "bootstrap"
 import "../stylesheets/application"
 import "../utilities/sorting"
+import "../utilities/check_password"
 
 // document.addEventListener("turbolinks:load", ()=>{
 //     $('[data-toggle="tooltip"]').tooltip();

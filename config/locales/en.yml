@@ -155,10 +155,11 @@ en:
         pasword: "Password"
         remember: "Remember me"
         enter_email: "Enter email"
-    registration:
+    registrations:
       new:
         email: "Email"
-        pasword: "Password"
+        password: "Password"
         password_confirmation: "Password confirmation"
         first_name: "First name"
         last_name: "Last name"
+        header: "Become a Guru"
