@@ -14,10 +14,11 @@ ActiveStorage.start()
 
 import "bootstrap"
 import "../stylesheets/application"
+import "../utilities/sorting"
 
-document.addEventListener("turbolinks:load", ()=>{
-    $('[data-toggle="tooltip"]').tooltip()
-    $('[data-toggle="popover"]').popover()
-})
+// document.addEventListener("turbolinks:load", ()=>{
+//     $('[data-toggle="tooltip"]').tooltip();
+//     $('[data-toggle="popover"]').popover()
+// })
 
     
