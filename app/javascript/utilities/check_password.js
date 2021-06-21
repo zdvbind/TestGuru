@@ -14,13 +14,14 @@ class PasswordConfirmation{
   }
 
   checkPasswords() {
-    if (this.confirm_password.value == '') {
+    if (this.confirm_password.value === '') {
       this.inputs.forEach((field_password) =>  {
         field_password.classList.remove('is-valid')
         field_password.classList.remove('is-invalid')
       })
+      return
     }
-    else if (this.password.value == this.confirm_password.value) {
+    if (this.password.value === this.confirm_password.value) {
       this.inputs.forEach((field_password) =>  {
         field_password.classList.add('is-valid')
         field_password.classList.remove('is-invalid')
