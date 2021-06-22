@@ -20,6 +20,10 @@ function formInlineHandler(testId) {
   let $testTitle = $('.test-title[data-test-id="' + testId + '"]')
   let $formInline = $('.form-inline[data-test-id="' + testId + '"]')
 
+  if (!($formInline && $testTitle && link)) {
+    return
+  }
+
   $testTitle.toggle()
   $formInline.toggle()
 
