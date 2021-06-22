@@ -98,6 +98,8 @@ ru:
         actions: "Доступные действия"
       edit:
         edit: "Редактирование теста"
+      form_inline:
+        submit: "ОК"
     questions:
       show:
         header: "Тест"

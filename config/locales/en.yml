@@ -126,6 +126,8 @@ en:
         actions: "Actions"
       edit:
         edit: "Editing test"
+      form_inline:
+        submit: "ОК"
     questions:
       show:
         header: "Test"

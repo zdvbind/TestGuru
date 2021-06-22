@@ -7,6 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import "jquery"
 
 Rails.start()
 Turbolinks.start()
@@ -16,10 +17,10 @@ import "bootstrap"
 import "../stylesheets/application"
 import "../utilities/sorting"
 import "../utilities/check_password"
-
-// document.addEventListener("turbolinks:load", ()=>{
-//     $('[data-toggle="tooltip"]').tooltip();
-//     $('[data-toggle="popover"]').popover()
-// })
+import "../utilities/form_inline"
+document.addEventListener("turbolinks:load", ()=>{
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover()
+})
 
     
