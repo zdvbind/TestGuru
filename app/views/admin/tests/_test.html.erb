@@ -11,7 +11,9 @@
   <td class = "align-middle">
     <%= link_to t('item.link.edit'),
                 edit_admin_test_path(test),
-                data: { test_id: test.id },
+                data: { test_id: test.id,
+                        text_edit: t('item.link.edit'),
+                        text_cancel: t('item.link.cancel')},
                 class: "btn btn-outline-warning btn-sm form-inline-link" %>
   </td>
   <td class = "align-middle">

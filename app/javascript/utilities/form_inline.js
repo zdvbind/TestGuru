@@ -28,8 +28,8 @@ function formInlineHandler(testId) {
   $formInline.toggle()
 
   if ($formInline.is(':visible')) {
-    link.textContent = 'Cancel'
+    link.textContent = link.dataset.textCancel
   } else {
-    link.textContent = 'Edit'
+    link.textContent = link.dataset.textEdit
   }
 }

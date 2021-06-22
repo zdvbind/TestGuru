@@ -8,6 +8,7 @@ ru:
       back: "Назад"
       show: "Показать"
       edit: "Редактировать"
+      cancel: "Отменить"
       delete: "Удалить"
       new_question: "Новый вопрос"
       login: "Войти"

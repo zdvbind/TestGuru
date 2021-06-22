@@ -8,6 +8,7 @@ en:
       back: "Back"
       show: "Show"
       edit: "Edit"
+      cancel: "Cancel"
       delete: "Delete"
       new_question: "New_question"
       login: "LogIn"
