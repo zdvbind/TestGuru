@@ -18,7 +18,7 @@ class ProgressBar {
     const questionsCount = this.input.dataset.questionsCount
 
     const currentProgress = 100 * currentNumber / questionsCount
-    progressBar.style.width = currentProgress + '%'
+    progressBar.style.width = `${currentProgress}%`
     progressBar.ariaValueNow = currentProgress
   }
 
