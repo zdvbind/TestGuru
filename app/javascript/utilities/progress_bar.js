@@ -2,16 +2,24 @@ document.addEventListener('turbolinks:load', function () {
   let control = document.querySelector('.progress')
 
   if (control) {
-    startProgressBar(control)
+    new ProgressBar(control)
   }
 })
 
-const startProgressBar = (control) => {
-  const progressBar = control.querySelector('.progress-bar')
-  const currentNumber = control.dataset.currentNumber
-  const questionsCount = control.dataset.questionsCount
+class ProgressBar {
+  constructor(input) {
+    this.input = input
+    this.calculate ()
+  }
 
-  const currentProgress = 100 * currentNumber / questionsCount
-  progressBar.style.width = currentProgress + '%'
-  progressBar.ariaValueNow = currentProgress
+  calculate() {
+    const progressBar = this.input.querySelector('.progress-bar')
+    const currentNumber = this.input.dataset.currentNumber
+    const questionsCount = this.input.dataset.questionsCount
+
+    const currentProgress = 100 * currentNumber / questionsCount
+    progressBar.style.width = currentProgress + '%'
+    progressBar.ariaValueNow = currentProgress
+  }
+
 }
