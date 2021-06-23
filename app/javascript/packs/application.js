@@ -18,6 +18,8 @@ import "../stylesheets/application"
 import "../utilities/sorting"
 import "../utilities/check_password"
 import "../utilities/form_inline"
+import "../utilities/progress_bar"
+
 document.addEventListener("turbolinks:load", ()=>{
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover()
