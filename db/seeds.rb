@@ -13,15 +13,15 @@ category = Category.create!(
   ]
 )
 
-user = User.all
-#   [
-#     { email: '1@gmail.com' },
-#     { email: '2@gmail.com' },
-#     { email: '3@gmail.com' },
-#     { email: '4@gmail.com' },
-#     { email: '5@gmail.com' }
-#   ]
-# )
+user = User.create!(
+  [
+    { email: '1@gmail.com', first_name: 'Dmitry', last_name: 'Zaguta', type: 'User', password: 'password' },
+    { email: '2@gmail.com', first_name: 'Alex', last_name: 'Pupkin', type: 'Admin', password: 'password' },
+    { email: '3@gmail.com', first_name: 'Petr', last_name: 'Petrov', type: 'User', password: 'password' },
+    { email: '4@gmail.com', first_name: 'Ivan', last_name: 'Ivanov', type: 'User', password: 'password' },
+    { email: '5@gmail.com', first_name: 'Roman', last_name: 'Romanov', type: 'User' ,password: 'password' }
+  ]
+)
 
 test = Test.create!(
   [
