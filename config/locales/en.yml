@@ -81,6 +81,13 @@ en:
       author: "Author"
       q_count: "Questions count"
 
+  feedbacks:
+    new:
+      title: "Leave a feedback"
+      send: "Send a feedback"
+      subj: "Subject"
+      message: "Message"
+
   test_passages:
     show:
       passing: "Passing the %{title} test"

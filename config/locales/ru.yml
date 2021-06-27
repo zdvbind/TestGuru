@@ -53,6 +53,13 @@ ru:
       author: "Автор"
       q_count: "Количество вопросов"
 
+  feedbacks:
+    new:
+      title: "Оставьте отзыв"
+      send: "Отправить отзыв"
+      subj: "Тема"
+      message: "Сообщение"
+
   test_passages:
     show:
       passing: "Прохождение %{title} теста"

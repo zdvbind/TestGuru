@@ -1,8 +1,19 @@
-<p>
-  <%= current_year %>
-  <%= t('creator') %>
-  <%= github_url('zdvbind', 'TestGuru') %>
-</p>
-<p>
-  <%= link_to t('item.link.footer_school'), 'https://thinknetica.com/', target: '_blank' %>
-</p>
+<div class="container col-12 col-md-8">
+  <div class="row">
+    <div class="col">
+      <%= current_year %>
+      <%= t('creator') %>
+      <%= github_url('zdvbind', 'TestGuru')  %>
+    </div>
+    <div class="col">
+      <p class="text-center">
+      <%= link_to t('item.link.footer_school'), 'https://thinknetica.com/', target: '_blank', class: "nav-link" %>
+      </p>
+    </div>
+    <div class="col">
+      <p class="text-end">
+      <%= link_to 'Feedback', new_feedback_path, class: "nav-link " %>
+      </p>
+    </div>
+  </div>
+</div>
