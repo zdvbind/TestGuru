@@ -59,6 +59,8 @@ ru:
       send: "Отправить отзыв"
       subj: "Тема"
       message: "Сообщение"
+    create:
+      feedback: "Благодарим за отзыв. Ваше мнение очень важно для нас."
 
   test_passages:
     show:

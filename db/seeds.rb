@@ -15,8 +15,8 @@ category = Category.create!(
 
 user = User.create!(
   [
-    { email: '1@gmail.com', first_name: 'Dmitry', last_name: 'Zaguta', type: 'User', password: 'password' },
-    { email: '2@gmail.com', first_name: 'Alex', last_name: 'Pupkin', type: 'Admin', password: 'password' },
+    { email: '1@gmail.com', first_name: 'Admin', last_name: 'Adminov', type: 'Admin', password: 'password' },
+    { email: '2@gmail.com', first_name: 'Alex', last_name: 'Pupkin', type: 'User', password: 'password' },
     { email: '3@gmail.com', first_name: 'Petr', last_name: 'Petrov', type: 'User', password: 'password' },
     { email: '4@gmail.com', first_name: 'Ivan', last_name: 'Ivanov', type: 'User', password: 'password' },
     { email: '5@gmail.com', first_name: 'Roman', last_name: 'Romanov', type: 'User' ,password: 'password' }
@@ -27,12 +27,12 @@ test = Test.create!(
   [
     { title: 'Algebra', level: 3, category: category.first, author: user.first },
     { title: 'Geometry', level: 2, category: category.first, author: user.first },
-    { title: 'Trigonometry', level: 2, category: category.first, author: user.second },
+    { title: 'Trigonometry', level: 2, category: category.first, author: user.first },
     { title: 'Trigonometry', level: 4, category: category.first, author: user.second },
-    { title: 'Data Structures', level: 2, category: category.second, author: user.third },
-    { title: 'Algorithms', level: 4, category: category.second, author: user.third },
-    { title: 'Basketball', level: 1, category: category.third, author: user.third },
-    { title: 'Hockey', level: 3, category: category.third, author: user.third }
+    { title: 'Data Structures', level: 2, category: category.second, author: user.first },
+    { title: 'Algorithms', level: 4, category: category.second, author: user.first },
+    { title: 'Basketball', level: 1, category: category.third, author: user.first },
+    { title: 'Hockey', level: 3, category: category.third, author: user.first }
   ]
 )
 

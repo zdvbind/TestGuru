@@ -87,6 +87,8 @@ en:
       send: "Send a feedback"
       subj: "Subject"
       message: "Message"
+    create:
+      feedback: "Thanks for your feedback. Your feedback would be particularly appreciated."
 
   test_passages:
     show:
