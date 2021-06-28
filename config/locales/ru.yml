@@ -28,6 +28,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category: "Категория"
+        under_construction: "Тест в разработке"
       question:
         body: "Вопрос"
       answer:
@@ -110,6 +111,9 @@ ru:
         edit: "Редактирование теста"
       form_inline:
         submit: "ОК"
+      form:
+        positive: "Да"
+        negative: "Нет"
     questions:
       show:
         header: "Тест"

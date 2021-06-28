@@ -16,6 +16,7 @@ class Test < ApplicationRecord
   scope :medium, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
   scope :by_category, ->(cat) { joins(:category).where(categories: { title: cat }) }
+  scope :available_for, -> { where(under_construction: false) }
 
   def self.titles_by_category(cat)
     by_category(cat).order(title: :desc).pluck(:title)

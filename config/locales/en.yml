@@ -19,6 +19,7 @@
 # The following keys must be escaped otherwise they will not be retrieved by
 # the default I18n backend:
 #
+#
 # true, false, on, off, yes, no
 #
 # Instead, surround them with single quotes.
@@ -58,6 +59,7 @@ en:
         title: "Title"
         level: "Level"
         category: "Category"
+        under_construction: "Test under construction"
       question:
         body: "Body"
       answer:
@@ -138,6 +140,9 @@ en:
         edit: "Editing test"
       form_inline:
         submit: "ОК"
+      form:
+        positive: "Yes"
+        negative: "No"
     questions:
       show:
         header: "Test"

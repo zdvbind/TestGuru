@@ -1,5 +1,5 @@
 <%= form_with model: [:admin, @test], local: true do |form| %>
-<%= render 'shared/errors', resource: @test %>
+  <%= render 'shared/errors', resource: @test %>
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title, id: :test_title %>
@@ -14,6 +14,14 @@
     <%= form.label :category %><br>
     <%= form.collection_select :category_id, Category.all,
                                :id, :title, prompt: true %>
+  </p>
+
+  <p>
+    <%= form.label :under_construction%><br>
+    <%= t('.positive') %>
+    <%= radio_button('test', 'under_construction', true) %>
+    <%= t('.negative') %>
+    <%= radio_button('test', 'under_construction', false) %>
   </p>
 
   <p>
