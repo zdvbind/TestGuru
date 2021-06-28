@@ -67,6 +67,7 @@ ru:
       passing: "Прохождение %{title} теста"
       question_number: "Вопрос № %{number} из "
       gist: "Сохранить вопрос в Gist"
+      next: "Далее"
     result:
       header: "Тест %{title} успешно завершён"
       answer_pattern: "Количество правильных ответов: %{correct_answer} из "
