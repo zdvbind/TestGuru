@@ -80,6 +80,22 @@ ru:
       failure: "Во время сохранения gist произошла ошибка"
 
   admin:
+    badges:
+      new:
+        badge: "Создать новый бейдж"
+      create:
+        success: "Бейдж успешно создан"
+      update:
+        success: "Бейдж успешно обновлен"
+      destroy:
+        success: "Бейдж успешно удален"
+      index:
+        header: "Доступные бейджи"
+        title: "Название"
+        rule: "Правило"
+        value: "Значение"
+        image: "Изображение"
+        actions: "Доступные действия"
     gists:
       index:
         header: "Список сохраненных в Gist вопросов"

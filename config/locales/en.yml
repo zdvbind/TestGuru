@@ -109,6 +109,22 @@ en:
       failure: "An error occurred while saving gist"
 
   admin:
+    badges:
+      new:
+        badge: "Create a new badge"
+      create:
+        success: "Badge was created successfully"
+      update:
+        success: "Badge was updated successfully"
+      destroy:
+        success: "Badge was deleted successfully"
+      index:
+        header: "All badges"
+        title: "Title"
+        rule: "Rule"
+        value: "Value"
+        image: "Image"
+        actions: "Actions"
     gists:
       index:
         header: "List of questions, saved in Gist"

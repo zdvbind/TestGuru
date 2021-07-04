@@ -5,6 +5,7 @@ ru:
     link:
       new_test: "Новый тест"
       new_answer: "Новый ответ"
+      new_badge: "Новый бейдж"
       back: "Назад"
       show: "Показать"
       edit: "Редактировать"

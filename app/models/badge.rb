@@ -5,11 +5,9 @@ class Badge < ApplicationRecord
   has_many :user_badges
   has_many :users, through: :user_badges
 
-  validates :title, :rule, :value, :umg_url, presence: true
+  validates :title, :rule, :value, :img_url, presence: true
 
-  private
-
-  def image
+  def self.images
     IMAGE_URLS
   end
 end

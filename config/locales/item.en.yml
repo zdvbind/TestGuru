@@ -5,6 +5,7 @@ en:
     link:
       new_test: "New test"
       new_answer: "New answer"
+      new_badge: "New badge"
       back: "Back"
       show: "Show"
       edit: "Edit"
