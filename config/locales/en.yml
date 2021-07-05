@@ -107,6 +107,8 @@ en:
     gist:
       success: "was successfully created!"
       failure: "An error occurred while saving gist"
+    update:
+      earned_badge: "Badge was earned"
 
   admin:
     badges:

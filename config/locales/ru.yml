@@ -78,6 +78,8 @@ ru:
     gist:
       success: "успешно сохранен!"
       failure: "Во время сохранения gist произошла ошибка"
+    update:
+      earned_badge: "Заработан бейдж"
 
   admin:
     badges:
