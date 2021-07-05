@@ -127,6 +127,14 @@ en:
         value: "Value"
         image: "Image"
         actions: "Actions"
+      show:
+        title: "Title"
+        rule: "Rule"
+        value: "Value"
+        image: "Image"
+      edit:
+        edit: "Editing"
+
     gists:
       index:
         header: "List of questions, saved in Gist"

@@ -21,5 +21,6 @@ en:
       signin_with: "Sign in with"
       footer_school: "Training project in online-school Thinknetika"
       badges: "View badges"
+      create_badges: "Creating badges"
     popup:
       confirm: 'Are you sure?'

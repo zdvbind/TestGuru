@@ -2,7 +2,7 @@
   <%= link_to "Test Guru", root_path, class: 'navbar-brand' %>
   <span class="navbar-text">
     <%= t('nav.panel') %>
-    <%= link_to t('item.link.badges'), admin_badges_path, class: 'btn btn-outline-secondary btn-sm' %>
+    <%= link_to t('item.link.create_badges'), admin_badges_path, class: 'btn btn-outline-secondary btn-sm' %>
     <%= link_to t('nav.gists'), admin_gists_path, :class => 'btn btn-outline-secondary btn-sm' %>
     <%= t('nav.welcome') %><b><%= current_user.email %></b> <%= t('nav.guru') %>
     <div class="d-inline-block">

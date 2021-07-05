@@ -21,6 +21,7 @@ ru:
       signin_with: "Войти с помощью"
       footer_school: "Учебный проект в онлайн школе Thinknetika"
       badges: "Посмотреть бейджи"
+      create_badges: "Создание бейджей"
 
     popup:
       confirm: 'Вы уверены?'

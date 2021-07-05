@@ -4,6 +4,6 @@
 <p><%= t('.value')%>: <%= @badge.value%></p>
 <p><%= t('.image')%>: <%= image_tag @badge.img_url, size: 80 %></p>
 
-<%= link_to t('.edit'), edit_admin_badge_path(@badge) %>
-<%= link_to t('.back'), admin_badges_path %>
+<%= link_to t('item.link.edit'), edit_admin_badge_path(@badge) %>
+<%= link_to t('item.link.back'), admin_badges_path %>
 </div>
