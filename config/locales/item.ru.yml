@@ -20,6 +20,7 @@ ru:
       lost_unlock: "Не получили инструкции по разблокировке?"
       signin_with: "Войти с помощью"
       footer_school: "Учебный проект в онлайн школе Thinknetika"
+      badges: "Посмотреть бейджи"
 
     popup:
       confirm: 'Вы уверены?'

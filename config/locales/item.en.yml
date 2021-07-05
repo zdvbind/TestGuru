@@ -20,5 +20,6 @@ en:
       lost_unlock: "Didn't receive unlock instructions?"
       signin_with: "Sign in with"
       footer_school: "Training project in online-school Thinknetika"
+      badges: "View badges"
     popup:
       confirm: 'Are you sure?'

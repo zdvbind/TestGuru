@@ -169,3 +169,10 @@ ru:
         first_name: "Имя"
         last_name: "Фамилия"
         header: "Стань Гуру"
+
+  badges:
+    index:
+      header: "Доступные бейджы"
+      title: "Название"
+      image: "Изображение"
+      user_header: "Заработанные бейджи"

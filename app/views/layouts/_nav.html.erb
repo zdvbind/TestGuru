@@ -5,6 +5,7 @@
       <%= link_to t('nav.panel'), admin_tests_path, :class => 'btn btn-outline-secondary btn-sm' %>
     <% end %>
     <% if user_signed_in? %>
+      <%= link_to t('item.link.badges'), badges_path, class: 'btn btn-outline-secondary btn-sm' %>
       <%= t('nav.welcome') %><b><%= current_user.email %></b> <%= t('nav.guru') %> |
       <%= link_to t('item.link.logout'), destroy_user_session_path, method: :delete %>
     <% else %>

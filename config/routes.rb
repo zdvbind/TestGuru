@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resource :feedback, only: %i[create new]
+  resources :badges, only: %i[index]
   root 'tests#index'
 
   devise_for :users, controllers: { sessions: 'users/sessions' }, path: :gurus,
