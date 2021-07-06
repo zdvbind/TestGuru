@@ -11,7 +11,8 @@ class TestPassagesController < ApplicationController
       if @test_passage.successfully
         badge = BadgeService.new(@test_passage)
         badge.call
-        flash[:notice] = t('.earned_badge')
+
+        flash[:notice] = t('.earned_badge') if badge.assigned
       end
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)

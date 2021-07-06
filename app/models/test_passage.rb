@@ -7,6 +7,8 @@ class TestPassage < ApplicationRecord
 
   before_validation :b_valid_set_current_question
 
+  scope :success, -> { where(successfully: true) }
+
   def completed?
     current_question.nil?
   end
