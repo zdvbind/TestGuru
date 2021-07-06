@@ -5,6 +5,7 @@ ru:
     attributes:
       test:
         title: "Название"
+        provided_time: "Отведенное на тест время"
     errors:
       messages:
         blank: "не может быть пустым"

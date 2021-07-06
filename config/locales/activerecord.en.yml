@@ -5,6 +5,7 @@ en:
     attributes:
       test:
         title: "Title"
+        provided_time: "Time provided for the test"
     errors:
       messages:
         blank: "can't be blank"

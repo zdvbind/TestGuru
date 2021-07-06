@@ -121,6 +121,7 @@ ru:
         category: "Категория"
         author: "Автор"
         q_count: "Количество вопросов"
+        provided_time: "Время теста"
         actions: "Доступные действия"
       create:
         success: "Тест успешно создан"
@@ -130,6 +131,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category: "Категория"
+        provided_time: "Время отведенное на тест"
         author: "Автор"
         t_questions: "Вопросы теста"
         body: "Вопрос"

@@ -7,6 +7,7 @@
   <td class = "align-middle"><%= test.category.title %></td>
   <td class = "align-middle"><%= test.author.email %></td>
   <td class = "align-middle"><%= count_of_questions(test) %></td>
+  <td class = "align-middle"><%= test.provided_time %></td>
   <td class = "align-middle"><%= link_to t('item.link.show'), admin_test_path(test), class: "btn btn-outline-info btn-sm" %></td>
   <td class = "align-middle">
     <%= link_to t('item.link.edit'),
