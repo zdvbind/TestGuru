@@ -21,7 +21,11 @@ class TestPassage < ApplicationRecord
   end
 
   def time_is_up?
-    test.provided_time.present? && (self.created_at - Time.now + test.provided_time * 60).negative?
+    test.provided_time.present? && time_left.negative?
+  end
+
+  def time_left
+    created_at - Time.now + test.provided_time * 60
   end
 
   def rating
@@ -37,7 +41,7 @@ class TestPassage < ApplicationRecord
   end
 
   def current_question_number
-    test.questions.index(current_question)+1
+    test.questions.index(current_question) + 1
   end
 
   private

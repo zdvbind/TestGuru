@@ -2,6 +2,12 @@
 
   <h1><%= t('.passing', title: @test_passage.test.title) %></h1>
 
+  <% if @test_passage.test.provided_time.present? %>
+    <%= content_tag :div, class: 'timer col-12 col-md-8', data:{time_left: @test_passage.time_left} do %>
+      <h4 class='time'></h4>
+    <% end %>
+  <% end %>
+
   <%= content_tag :div, class: 'progress', data: { current_number: @test_passage.current_question_number, questions_count: @test_passage.count_of_questions } do %>
     <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
   <% end %>
@@ -25,7 +31,7 @@
       <p><%= link_to t('.gist'), gist_test_passage_path(@test_passage), method: :post %></p>
 
     <div class="mb-3">
-      <%= form.submit t('.next'), class: 'btn btn-primary'%>
+      <%= form.submit t('.next'), class: 'btn btn-primary js-autopress'%>
     </div>
   <% end %>
 </div>
