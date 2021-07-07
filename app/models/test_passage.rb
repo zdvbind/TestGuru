@@ -10,7 +10,7 @@ class TestPassage < ApplicationRecord
   scope :success, -> { where(successfully: true) }
 
   def completed?
-    current_question.nil?
+    current_question.nil? || time_is_up?
   end
 
   def accept!(answer_ids)
@@ -18,6 +18,10 @@ class TestPassage < ApplicationRecord
     self.successfully ||= true if test_passed?
 
     save!
+  end
+
+  def time_is_up?
+    test.provided_time.present? && (self.created_at - Time.now + test.provided_time * 60).negative?
   end
 
   def rating
